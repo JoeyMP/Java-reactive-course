@@ -1,9 +1,3 @@
 {
-  "customerId": 1,
-  "ticker": "GOOGLE",
-  "price": 110,
-  "quantity": 2,
-  "action": "BUY",
-  "totalPrice": 220,
-  "balance": 9780
+  "detail": "Customer [id=1] does not have enough funds to complete the transaction"
 }

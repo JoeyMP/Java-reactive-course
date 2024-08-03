@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("customer")
+@RequestMapping("customers")
 public class CustomerPortfolioController {
     private final CustomerPortfolioService customerPortfolioService;
 

@@ -16,8 +16,8 @@ import java.nio.file.Path;
 @MockServerTest
 @AutoConfigureWebTestClient
 @SpringBootTest(properties = {
-        "customer.service.url = http://localhost:{mockServerPort}",
-        "stock.service.url = http://localhost:{mockServerPort}"
+        "customer.service.url = http://localhost:${mockServerPort}",
+        "stock.service.url = http://localhost:${mockServerPort}"
 })
 abstract class AbstractIntegrationTest {
 
@@ -34,7 +34,7 @@ abstract class AbstractIntegrationTest {
         ConfigurationProperties.disableLogging(true);
     }
 
-    protected String resourceToString(String relativePath){
+    protected String resourceToString(String relativePath) {
         try {
             return Files.readString(TEST_RESOURCES_PATH.resolve(relativePath));
         } catch (IOException e) {
